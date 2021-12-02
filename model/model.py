@@ -1,4 +1,3 @@
-#update
 import torch
 import torch.nn as nn
 import numpy as np
@@ -14,8 +13,6 @@ class Model(nn.Module):
         self.anchor_length = anchors.shape[0]
         self.number_anchor = anchors.shape[1]
         self.channel = channel
-        # a = torch.tensor(anchors).float().view(self.anchor_length, -1, 2)
-        # self.register_buffer('anchor',a)
 
         self.focus = Focus(self.channel,2)
         self.conv1 = BaseConv(32,64,kernel_size=3,stride=2)
