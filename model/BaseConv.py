@@ -15,5 +15,5 @@ class BaseConv(nn.Module):
 
 if __name__ == '__main__':
     input = torch.randn(1,3,640,640)
-    model = BaseConv(3,3,1,1)
+    model = BaseConv(3,3,3,2)
     print(model(input).size())
